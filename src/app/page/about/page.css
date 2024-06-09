@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+.container {
+  color: #333;
+  font: 14px/1.5 "Fira Sans";
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  color: #fff;
+  flex: 1 1 auto;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.col:nth-child(2) {
+  min-width: 20%;
+}
+
+.col:nth-child(4) {
+  min-width: 33%;
+}
+
+.photo {
+  background: #0f0523 50% 50% / cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: 1s;
+  transform-origin: bottom right;
+}
+
+.photo::before {
+  background: linear-gradient(transparent, #43113380, #000320);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 1.33333rem;
+  line-height: 1.25;
+  margin: 0;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all 0.275s ease-in-out, visibility 0s 0.275s;
+  visibility: hidden;
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+.slide {
+  background: #190115cc;
+  padding: 0 1.5rem;
+}
+
+.row:hover ~ .row .slide {
+  transform: translateY(-100%);
+}
+
+.row:hover .slide {
+  transform: translateX(100%);
+}
+
+.row:hover .col:hover ~ .col .slide {
+  transform: translateX(-100%);
+}
+
+.row:hover .col:hover .slide {
+  transform: none;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.col:hover .photo {
+  transform: scale(1.25);
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 100%;
+  }
+}

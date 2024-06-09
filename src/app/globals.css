@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    background: rgb(17 24 39 / var(--tw-bg-opacity));
+  }
+}
+
+body {
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

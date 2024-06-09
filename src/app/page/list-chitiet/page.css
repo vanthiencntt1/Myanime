@@ -1,0 +1,71 @@
+.page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-image: url(https://i.pinimg.com/originals/54/0d/30/540d30e80abd4e5a4478e1c6897c390d.jpg);
+  background-size: cover; /* Ensures the background image covers the entire area */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  height: 50vh; /* Sets the height to 100% of the viewport height */
+  margin: 0; /* Removes default margin */
+  color: #ffff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #ffff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.video-section {
+  flex: 1;
+  text-align: center;
+}
+
+.video-section img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+}
+
+.watch-button {
+  display: block;
+
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.info-section {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.details {
+  margin-top: 20px;
+}
+
+.detail-item {
+  margin-bottom: 10px;
+}
+
+.detail-item span {
+  font-weight: bold;
+}
