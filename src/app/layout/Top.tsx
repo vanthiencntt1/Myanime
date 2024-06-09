@@ -106,8 +106,8 @@ export default function Top() {
             </div>
           </nav>
 
-          <nav className=" w-40   uppercase menu hidden flex  px-4">
-            <ul>
+          <nav className="   rounded-xl uppercase menu hidden flex   px-4">
+            <ul className="w-[100%] text-center">
               <li className="p-2">
                 <Link href="/" className="hover-Item ">
                   TRANG CHỦ
