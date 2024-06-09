@@ -106,21 +106,21 @@ export default function Top() {
             </div>
           </nav>
 
-          <nav className=" w-40 rounded-xl  uppercase menu hidden flex justify-end px-9">
+          <nav className=" w-40   uppercase menu hidden flex  px-4">
             <ul>
-              <li>
+              <li className="p-2">
                 <Link href="/" className="hover-Item ">
-                  Home
+                  TRANG CHỦ
                 </Link>
               </li>
-              <li>
-                <Link href="/" className="hover-Item ">
-                  Anime
+              <li className="p-2">
+                <Link href="/page/listanime" className="hover-Item">
+                  DANH SÁCH
                 </Link>
               </li>
-              <li>
-                <Link href="/" className="hover-Item ">
-                  Thể Loại
+              <li className="p-2">
+                <Link href="/page/about" className="hover-Item">
+                  GIỚI THIỆU
                 </Link>
               </li>
             </ul>
