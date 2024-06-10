@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
 import "./page.css";
 import Movelist from "./page/movelist/Movelist";
@@ -79,6 +79,7 @@ export default function Home() {
           <button className="next" onClick={nextSlide}></button>
         </div>
       </div>
+
       <Movelist />
     </div>
   );
