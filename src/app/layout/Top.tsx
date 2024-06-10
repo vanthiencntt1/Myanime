@@ -57,7 +57,7 @@ export default function Top() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="hover-Item">
+                <Link href="/hosobenhan/hosobenhan" className="hover-Item">
                   THỂ LOẠI
                 </Link>
               </li>
