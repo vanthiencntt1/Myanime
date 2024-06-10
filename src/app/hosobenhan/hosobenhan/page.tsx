@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import * as ServerApi from "../../../services/services.js";
-import "tailwindcss/tailwind.css";
 
 //20902958
 interface listEncounters {
