@@ -17,7 +17,9 @@
   position: relative;
   overflow: hidden;
 }
-
+a {
+  width: 100%;
+}
 .col:nth-child(2) {
   min-width: 20%;
 }

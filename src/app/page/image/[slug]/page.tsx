@@ -1,8 +1,8 @@
-import React from "react";
-import "./page.css";
-import Link from "next/link";
+"use client";
+import React, { useState } from "react";
 
-export default function page() {
+export default function page({ params: { slug } }) {
+  const [isHovered, setIsHovered] = useState(false);
   const imageData = [
     {
       id: 0,
@@ -40,34 +40,32 @@ export default function page() {
       title: "Image 07",
     },
   ];
+  console.log(imageData[slug]);
+
+  const photoStyle = {
+    width: "100%",
+    height: "100%",
+    transition: "transform 0.3s ease",
+    transform: isHovered ? "scale(1.1)" : "scale(1)",
+  };
+  const imageContainerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+    overflow: "hidden",
+  };
   return (
-    <div className="container">
-      <div className="row">
-        {imageData.slice(0, 3).map((image) => (
-          <Link key={image.id} href={`image/${image.id}`}>
-            <div className="col">
-              <div
-                className="photo"
-                style={{ backgroundImage: `url(${image.url})` }}
-              ></div>
-              <div className="slide"></div>
-            </div>
-          </Link>
-        ))}
-      </div>
-      <div className="row">
-        {imageData.slice(3).map((image) => (
-          <Link key={image.id} href={`image/${image.id}`}>
-            <div className="col">
-              <div
-                className="photo"
-                style={{ backgroundImage: `url(${image.url})` }}
-              ></div>
-              <div className="slide"></div>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div style={imageContainerStyle}>
+      <img
+        className="photo"
+        src={imageData[slug].url}
+        alt={`Image ${imageData[slug].id}`}
+        style={photoStyle}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      />
     </div>
   );
 }

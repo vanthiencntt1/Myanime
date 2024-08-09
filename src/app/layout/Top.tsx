@@ -35,6 +35,7 @@ export default function Top() {
       }
     }
   }
+
   return (
     <div className="bg-gray-900 text-slate-50">
       <div>
